@@ -1,27 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Model;
 
-/**
- *
- * @author Jude
- */
+	/*
+	* To change this license header, choose License Headers in Project Properties.
+	* To change this template file, choose Tools | Templates
+	* and open the template in the editor.
+	*/
+	/**
+	*
+	* @author Jude Modified By  Fatimaezzahra
+	*/
 public class Coordonnee {
-    
-    int x;
-    int y;
-//    boolean horizontale; // true si le bateau est horizontale, false vertical
-    int toucher; // -1 aucune action , 0 il y a un bateau , 1 coord toucher
-    
-    public Coordonnee(int X,int Y,boolean H,int T)
-    {
-        this.x=X;
-        this.y=Y;
-    //    this.horizontale=H;
-        this.toucher=T;
-    }
-    
-}
+	public int x;
+	public int y;
+	
+	public Coordonnee (int x ,int y){
+		this.x=x;
+		this.y=y;
+		}
+	
+	
+	
+
+	public int getX(){
+		return this.x ;
+	}	
+	public int getY(){
+		return this.y;
+	}	
+	public void SetX(int x){
+		this.x=x;
+	}
+	
+	public void SetY(int y){
+		this.y=y;
+	}
+	
+	}
+
