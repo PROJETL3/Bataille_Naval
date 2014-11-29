@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class humain extends Joueur {
 
-	int test;
+
 	private String nom;
 
 	public humain(String nom)
@@ -13,25 +13,30 @@ public class humain extends Joueur {
 		this.nom=nom;
 	}
 
-	boolean placer_bateau(int key , int value , int pos)
+	boolean placer_bateau(Navire bat ,Coordonnee c)
 	{
-
-
 		return false;
-		//placer le bateau en fonction de la clï¿½ et de la valeur (tï¿½te/taille)
-
-		//si position correcte retourner vrai
-		//sinon retourner faux
+		
 	}
 
 
-	public int tir(int key, int value)
+	public int tir(Coordonnee key)
 	{
-		// gerer par le champ
 
-		if (test == -1) return -1;
-		if (test == 0) return 0 ;
-		else return 1;
+		if(Carte.Tire(key)==1) 
+		{
+			System.out.println("Case vide touché");
+			return 1; 
+		}
+
+		if(Carte.Tire(key)==0)  
+		{
+			System.out.println("Bateau touché");
+			return 0;
+		}
+
+		else return -1;
+
 	}
 
 
@@ -45,7 +50,7 @@ public class humain extends Joueur {
 
 	}
 
-	
+
 
 
 

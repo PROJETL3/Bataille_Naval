@@ -2,11 +2,13 @@ package Model;
 
 abstract class Joueur{
 
-	private cuirasse cui1;
-	private cuirasse cui2;
-	private zodiaque zod;
-	private sm sm;
-	private pa pa;
+	cuirasse cui1;
+	cuirasse cui2;
+	zodiaque zod;
+	sm sm;
+	pa pa;
+	Champ Carte; 
+
 
 
 
@@ -21,9 +23,11 @@ abstract class Joueur{
 		zod = new zodiaque("zodiaque");
 		sm = new sm("sous-marin");
 		pa = new pa("porte avion");
+		Carte = new Champ();
+
 	}
 
-	public abstract int tir(int x, int y);  // coder selon le type de joueur (humain ou IA)
+	public abstract int tir(Coordonnee key);  // coder selon le type de joueur (humain ou IA)
 
 
 

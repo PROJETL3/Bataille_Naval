@@ -3,6 +3,7 @@ package Model;
 public class IA extends Joueur {
 
 	private String nom;
+	
 
 	public IA(String nom)
 	{
@@ -13,7 +14,7 @@ public class IA extends Joueur {
 
 
 
-	public int tir(int x , int y)
+	public int tir(Coordonnee key)
 	{
 
 
