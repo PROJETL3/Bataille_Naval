@@ -1,4 +1,4 @@
-package com.projet.modele;
+package Model;
 
 public class IA extends Joueur {
 
@@ -8,7 +8,7 @@ public class IA extends Joueur {
 	{
 		super(nom); 
 		this.nom=nom;
-		//Le placement des bateaux sera effectué par le champ de bataille
+		//Le placement des bateaux sera effectuï¿½ par le champ de bataille
 	}
 
 
@@ -19,7 +19,7 @@ public class IA extends Joueur {
 
 
 		return 0;
-		//Tir Aléatoire, algorithme à effectuer
+		//Tir Alï¿½atoire, algorithme ï¿½ effectuer
 	}
 
 

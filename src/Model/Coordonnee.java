@@ -8,7 +8,7 @@ public class Coordonnee {
     
     public int x;	// coordonnee x
     public int y;	// coordonnee y
-    int etat; 		// -1 aucune action , 0 il y a un bateau , 1 coord toucher
+    int etat; 		// -1 rien , -2 tire sur rien, 1 bateau, 2 tire sur bateau
     
     public Coordonnee(int X,int Y,int T)
     {

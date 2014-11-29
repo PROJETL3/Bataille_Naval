@@ -1,4 +1,4 @@
-package com.projet.modele;
+package Model;
 
 import java.io.IOException;
 
@@ -18,7 +18,7 @@ public class humain extends Joueur {
 
 		direction (pos);
 		return false;
-		//placer le bateau en fonction de la clé et de la valeur (tête/taille)
+		//placer le bateau en fonction de la clï¿½ et de la valeur (tï¿½te/taille)
 
 		//si position correcte retourner vrai
 		//sinon retourner faux
@@ -55,7 +55,7 @@ public class humain extends Joueur {
 
 		if (System.in.read()== 'O')  System.out.println("abandon");
 
-		else System.out.println("Abandon Annulé");
+		else System.out.println("Abandon Annulï¿½");
 
 	}
 
