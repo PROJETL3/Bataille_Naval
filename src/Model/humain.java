@@ -16,7 +16,7 @@ public class humain extends Joueur {
 	boolean placer_bateau(int key , int value , int pos)
 	{
 
-		direction (pos);
+
 		return false;
 		//placer le bateau en fonction de la cl� et de la valeur (t�te/taille)
 
@@ -35,20 +35,6 @@ public class humain extends Joueur {
 	}
 
 
-	public int direction (int s)  // 0 horizontale , 1 verticale
-	{
-		if (s == 0) {
-
-			/* si position bonne horizontale*/	return 0;
-			//sinon  return -1; 
-		}
-
-
-		else {
-			/* si position bonne verticale*/ return 1 ;
-			//sinon  return -1; 
-		}
-	}
 
 	void Abandon(String mot) throws IOException
 	{
