@@ -1,55 +1,58 @@
 package Model;
 
-
-
 public abstract class Mode_bataille_abstract {
 
 	
-
-	
+	private String Joueur,IA,Un_joueur,deux_joueur;
+	private String Type;
 	public Mode_bataille_abstract(String joueur, String type) 
 	{
-		
+		this.Joueur= joueur;
+	    this.Type=type;
 	}
-	public double choix_mode_jeu(String joueur, String type){
-	/*	switch(joueur)
-		case'demo'
-		new ordir;appel � la fonctione
+	public double choix_mode_jeu(String joueur){
 		
-		case'1joueur'
-		new ordir, new humain , appel � la fonctione 
-		case'2joueur'
-		new joueur j, appel � la methode 
+	switch(joueur)
+	{	       
+	        case IA   :          //appel à la fonctione
+		 
+	               Joueur.tir(Key);
+		    break;
+	
+		    case Un_joueur :       //appel � la fonctione 
+		    	                        
+		    	Joueur.placer_bateau( bat , c) 
+		    	Joueur.tir(key)
 		
-		*/
-		return 0;
+		case deux_joueur:
+	       //   appel à la methode 
+		
 	}
 		
 	
  //la deuxieme chose : le choix des types de bataille
 	
 	
-	public double bataille_normale( )//bataille_normale b_n, mission_radar ms_r, alerte_rouje a_r,mission_artillerie ms_a)
+	public double bataille_normale(bataille_normale bt_n, mission_radar ms_r, mission_arti ms_a, alerte_rouge al_r, Model.bataille_normale choix_jeu)
+	//bataille_normale b_n, mission_radar ms_r, alerte_rouje a_r,mission_artillerie ms_a)
     {
-	     /*if(choix_jeu==bataille_normale)
-	      *       { 
-	      *   return    appel methode de bataille normale;
-	      *       }
-	      * else if( choix_jeu==mission_radar)
-	      *       {
-	      *     return  apple de la methode mission radar;
-	      *       }
-	      * else if(choix_jeu==alerte_rouje)
-	      *       {
-	      *   return    appel methode alerte rouje;
-	      *       }
-	      * else
-	      *    {
-	      * return   appel methode de mission artillerie;
-	      *    }
-	      * 
-       
-       */  
+	   
+		if(choix_jeu==bt_n)
+	            { 
+	        return    appel methode de bataille normale;
+	           }
+	      else if( choix_jeu==ms_r)
+	            {
+	         return  apple de la methode mission radar;
+	            }
+	      else if(choix_jeu==al_r)
+	            {
+	         return    appel methode alerte rouje;
+	             }
+	       else
+	         {
+	       return   appel methode de mission artillerie;
+	          }
 		return (0.0);
      }
 	public int devine_position()
