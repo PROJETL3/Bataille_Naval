@@ -1,32 +1,26 @@
 package Model;
+/**
+ * classe IA 
+ * 
+ */
 
-public class IA extends Joueur {
+
+public class IA extends humain {
 
 	private String nom;
-	
 
 	public IA(String nom)
 	{
 		super(nom); 
 		this.nom=nom;
-		//Le placement des bateaux sera effectu� par le champ de bataille
 	}
 
 
-
-	public int tir(Coordonnee key)
-	{
-
-
-
-		return 0;
-		//Tir Al�atoire, algorithme � effectuer
+	public int tir()
+	{   
+		Coordonnee c;
+		c = new Coordonnee((int) (Math.random()*10+1),(int) (Math.random()*10+1),(int) (Math.random()*10+1));
+		return tir(c);
 	}
-
-
-
-
-
-
 
 }
