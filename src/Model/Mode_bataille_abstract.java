@@ -3,62 +3,109 @@ package Model;
 public abstract class Mode_bataille_abstract {
 
 	
-	private String Joueur,IA,Un_joueur,deux_joueur;
+	private String Joueur,Un_joueur,deux_joueur;
+	private String I_A;
+	Coordonnee cor;
+	Navire nav;
+	humain hum_1;
+	humain hum_2;
+	IA ia_1;
+	IA ia_2;
+	 humain hm;
 	private String Type;
-	public Mode_bataille_abstract(String joueur, String type) 
+	int y;
+    int x;
+	 double distance;
+
+	public Mode_bataille_abstract(String joueur, String type,Coordonnee cor,Navire nv,humain hum1,humain hum2,IA ia1, IA ia2 ) 
 	{
 		this.Joueur= joueur;
 	    this.Type=type;
-	}
-	public double choix_mode_jeu(String joueur){
+	    this.hum_1=hum1;
+	    this.hum_2=hum2;
+		this.ia_1=ia1;
+		this.ia_2=ia2;
+	    }
+	public void choix_mode_jeu(String joueur){
 		
 	switch(joueur)
 	{	       
-	        case IA   :          //appel à la fonctione
+	        case "IA"   :          //appel à la fonctione
 		 
-	               Joueur.tir(Key);
+	               ia_1.tir(cor);
 		    break;
 	
-		    case Un_joueur :       //appel � la fonctione 
+		    case "Un_joueur" :       //appel � la fonctione 
 		    	                        
-		    	Joueur.placer_bateau( bat , c) 
-		    	Joueur.tir(key)
+		    	hum_1.placer_bateau( nav , cor) ;
+		    	hum_1.tir(cor);
 		
-		case deux_joueur:
-	       //   appel à la methode 
+		case "deux_joueur":
+	       	
+			hum_1.placer_bateau( nav , cor) ;
+			hum_2.placer_bateau( nav , cor) ;
 		
+		//   appel à la methode 
+			
+			
+	    	hum_1.tir(cor);
+	    	hum_2.tir(cor);
+	    	
+	
+	}
 	}
 		
 	
  //la deuxieme chose : le choix des types de bataille
 	
 	
-	public double bataille_normale(bataille_normale bt_n, mission_radar ms_r, mission_arti ms_a, alerte_rouge al_r, Model.bataille_normale choix_jeu)
-	//bataille_normale b_n, mission_radar ms_r, alerte_rouje a_r,mission_artillerie ms_a)
+	public void bataille(bataille_normale bt_n, mission_radar ms_r, mission_arti ms_a, alerte_rouge al_r, Model.bataille_normale choix_jeu)
+	
     {
 	   
 		if(choix_jeu==bt_n)
 	            { 
-	        return    appel methode de bataille normale;
-	           }
-	      else if( choix_jeu==ms_r)
-	            {
-	         return  apple de la methode mission radar;
+	                 bt_n.tente_tire( hm); 	   
 	            }
-	      else if(choix_jeu==al_r)
+		
+	     else if( choix_jeu==ms_r)
+	            { 
+	    	       ms_r.tente_tire( hm);
+		           ms_r.indication_distance(distance, hm, x, y,cor);
+	            }
+               
+			
+	      else if(choix_jeu== ms_a)
 	            {
-	         return    appel methode alerte rouje;
-	             }
-	       else
+	              ms_a.selection_cord_vert(cor, y) ;
+	              ms_a.coor_horis( x, cor, y);
+	              ms_a.tente_tire( hm);
+	              
+	            }
+	       else 
 	         {
-	       return   appel methode de mission artillerie;
+	                al_r.selection_cord_vert(cor, y);
+	                al_r.coor_horis(x, cor, y);
+	                al_r.indication_distance(distance, hm, x, y, cor);
+	                
 	          }
-		return (0.0);
      }
-	public int devine_position()
+	
+	
+/*public boolean tout_est_coulé( cuirasse cu_1,cuirasse cu_2,zodiaque z,sm s_m,pa p_a )	// vérfie que tous les bateaux sont coulés
+
+{  String t[][]={{cu_1,t},cu_2,z,s_m,p_a};
+	for(String e:t){
+	if(   )
 	{
-		// appel � la methode position
-		return 1;
+		
 	}
+	}
+
+ }
+*/	
+
+
+
 
 }
