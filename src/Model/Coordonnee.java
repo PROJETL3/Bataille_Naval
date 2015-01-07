@@ -1,5 +1,7 @@
 package Model;
 
+import Enum.Etat;
+
 /**
  * @version 2.1
  * @author Abdel, Fatimaezzahra, Hajar, Jude;
@@ -8,13 +10,14 @@ public class Coordonnee {
     
     public int x;	// coordonnee x
     public int y;	// coordonnee y
-    int etat; 		// -1 rien , -2 tire sur rien, 1 bateau, 2 tire sur bateau
+    //int etat; 		// -1 rien , -2 tire sur rien, 1 bateau, 2 tire sur bateau
+    Etat etat;
     
     public Coordonnee(int X,int Y,int T)
     {
         this.x=X;
         this.y=Y;
-        this.etat=T;
+        this.etat=Etat.Rien;		// de base la coordonnee à rien càd la case est créate avec rien dedans (pas de bateau ni de tire)
     }
     
     public int getX()
@@ -27,7 +30,7 @@ public class Coordonnee {
     	return this.y;
     }
     
-    public int getEtat()
+    public Etat getEtat()
     {
     	return(this.etat);
     }
@@ -42,7 +45,7 @@ public class Coordonnee {
 		this.y=y;
 	}
 	
-	public void SetEtat(int etat)
+	public void SetEtat(Etat etat)
 	{
 		this.etat=etat;
 	}
