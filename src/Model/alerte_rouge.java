@@ -1,24 +1,4 @@
 
- /**
-	 * selection des coordonnee verticales
-	 * @param Coordonnee c
-	 * @param , int y
-	 * parcourir la coordonnée horizontale 
-	 * @param int x
-	 * @param  Coordonnee c
-	 * @param int y
-	 * * indication de la distance
-	 * @param double distance 
-	 * @param  humain hm
-	 * @param  int x
-	 * @param  int y
-	 * @param  Coordonnee c
-	
-	
-	 **/
-
-
-
 package Model;
 
 public class alerte_rouge extends bataille_normale {
@@ -27,6 +7,13 @@ public class alerte_rouge extends bataille_normale {
 		
 		super(n_v,cor);
 	}
+	/**
+	 * * selection des coordonnee verticales
+	 * @param Coordonnee c
+	 * @param , int y
+	 * 
+	 * */
+	
 
 	public int selection_cord_vert(Coordonnee c, int y) //selection de la coordonnee verticale
 	{
@@ -34,7 +21,12 @@ public class alerte_rouge extends bataille_normale {
 				
 		return Y;
 	}
-	
+	/**
+	 * * parcourir la coordonnée horizontale 
+	 * @param int x
+	 * @param  Coordonnee c
+	 * @param int y
+	 */
 	public int coor_horis(int x, Coordonnee c,int y)
 	{
 	     if (y == selection_cord_vert(c,y) )
@@ -50,6 +42,16 @@ public class alerte_rouge extends bataille_normale {
 	    }
    }
 		
+	 /**
+		 * * indication de la distance
+		 * @param double distance 
+		 * @param  humain hm
+		 * @param  int x
+		 * @param  int y
+		 * @param  Coordonnee c
+			
+		 **/
+
 		public double indication_distance(double distance , humain hm,int x, int y, Coordonnee c)// si la case qui est touché est vide , on retur
 		{  
 	             if(hm.tir(cor)==1);

@@ -1,41 +1,15 @@
 
 /**
 	 * fait appel à toutes les methodes
-	 * choisir les modes de jeux
 	 * 
-	 * @param joueur 
-	 *              Le joueur va choisir le mode de jeux
-	 *              
-	 * Choisir les types de batailles
-	 * @param bataille_normale bt_n    
-	 *                           fait appel à une methode de la classe bataille normal
-	 * @param mission_radar ms_r 
-	 *                           fait appel à une methode de la classe mission radar
-	 * @param mission_arti ms_a       
-	 *                           fait appel à une methode de la classe mission artillerie
-	 * @param alerte_rouge al_r        
-	 *                           fait appel à une methode de la classe alerte rouge
-	 * @param  Model.bataille_normale choix_jeu  
-	 *                           pour choisir le type de jeux
-	 *                           
-	 * vérfie si  tous les bateaux sont coulés
-	 * @param CuirasseFurtif cu_1          
-	 *                           appele à la classe cuirasse 
-	 * @param CuirasseFurtif cu_2  
-	 *                           appele à la classe cuirasse 
-	 * @param Zodiac z  
-	 *                           appele à la classe zodiaque
-	 * @param SousMarinNucleaire s_m          
-	 *                           appele à la sm 
-	 * @param PorteAvion pm
-	 *                           
-	 **/
+	 */
+
 package Model;
 
 public abstract class Mode_bataille_abstract {
 
 	
-	
+	//private String Joueur,Un_joueur,deux_joueur;
 	private String I_A;
 	Coordonnee cor;
 	Navire nav;
@@ -56,6 +30,12 @@ public abstract class Mode_bataille_abstract {
 		this.ia_1=ia1;
 		this.ia_2=ia2;
 	    }
+/**
+ *  choisir les modes de jeux
+ *  
+ * @param joueur 
+	 *              Le joueur va choisis le mode de jeux
+ */
 	public void choix_mode_jeu(String joueur){
 		
 	
@@ -95,9 +75,20 @@ public abstract class Mode_bataille_abstract {
 	}
 	}
 		
-	
- //la deuxieme chose : le choix des types de bataille
-	
+	/**
+	 *              
+	 * Choisir les types de batailles
+	 * 
+	 * @param bataille_normale bt_n    
+	 *                           fait appel à une methode de la classe bataille normal
+	 * @param mission_radar ms_r 
+	 *                           fait appel à une methode de la classe mission radar
+	 * @param mission_arti ms_a       
+	 *                           fait appel à une methode de la classe mission artillerie
+	 * @param alerte_rouge al_r        
+	 *                           fait appel à une methode de la classe alerte rouge
+	 * @param  Model.bataille_normale choix_jeu  
+	 */
 	
 	public void bataille(bataille_normale bt_n, mission_radar ms_r, mission_arti ms_a, alerte_rouge al_r, Model.bataille_normale choix_jeu)
 	
@@ -131,7 +122,22 @@ public abstract class Mode_bataille_abstract {
 	          }
      }
 	
-	
+	/**
+	 *
+	             pour choisir le type de jeux
+	 *                           
+	 * vérfie si  tous les bateaux sont coulés
+	 * @param CuirasseFurtif cu_1          
+	 *                           appele à la classe cuirasse 
+	 * @param CuirasseFurtif cu_2  
+	 *                           appele à la classe cuirasse 
+	 * @param Zodiac z  
+	 *                           appele à la classe zodiaque
+	 * @param SousMarinNucleaire s_m          
+	 *                           appele à la sm 
+	 * @param PorteAvion pm
+	 *                           
+	 **/
 public boolean tout_est_coulé( CuirasseFurtif cu_1,CuirasseFurtif cu_2,Zodiac z,SousMarinNucleaire s_m,PorteAvion p_a )	// vérfie que tous les bateaux sont coulés
 
 {  

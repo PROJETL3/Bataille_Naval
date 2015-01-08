@@ -1,3 +1,4 @@
+
 package Model;
 
 public class mission_arti extends bataille_normale{
@@ -8,18 +9,31 @@ public class mission_arti extends bataille_normale{
 		
 	}	
 	
-	public int selection_cord_vert(Coordonnee c, int y) //selection de la coordonnee verticale
+	/**
+	  * selection des coordonnees verticales
+	 * @param Coordonnee c
+	 * @param , int y
+	 */
+	public int selection_cord_vert(Coordonnee c, int y) 
 	{
 		int Y= c.y;
 				
 		return Y;
 	}
+	/**
+	 * 
+	 * parcourir la coordonnée horizontale dans la grille 'carte'
+	 * @param int x
+	 * @param  Coordonnee c
+	 * @param int y
 	
+	 **/
+
 	public int coor_horis(int x, Coordonnee c,int y)
 	{
 		if (y == selection_cord_vert(c,y) )
 		{
-			for(int i=y;i<carte.size(); i++)   // parcours la coordonnée horizontale dans la grille 'carte'
+			for(int i=y;i<carte.size(); i++)   
 				for(int j=c.x;j<carte.size();j++ )
 				{
 					x=c.x;
@@ -29,12 +43,13 @@ public class mission_arti extends bataille_normale{
 			return x;
 	}
 		
-/*	public boolean devine_pos(Navire nv, Coordonnee pos) // cette fonction renvoie la postion des navire
-	{
-		pos= nv.getCoordonnee();
-		return true;
-	}*/
-	public void tente_tire(humain hm) // cette methode va appeler la fonction tirer
+	/** appel à la methode tirer 
+	 * @param humain  hm
+	 * 
+	 * 
+	  */
+
+	public void tente_tire(humain hm) 
 	{  if(devine_pos(n_v, cor))
 		{
 		    hm.tir(cor);

@@ -1,3 +1,5 @@
+
+
 package Model;
 
 public class bataille_normale {
@@ -12,13 +14,27 @@ public class bataille_normale {
 		
 	}
 
-	
-	public boolean devine_pos(Navire nv, Coordonnee pos) // cette fonction renvoie la postion des navire
+	/**
+	 *  devine  la position du navire
+	 * @param Navire nv
+	 * @param Coordonne pos
+	 *
+	*/
+	public boolean devine_pos(Navire nv, Coordonnee pos) 
 	{
 		pos= nv.getCoordonnee();
 		return true;
 	}
-	public void tente_tire(humain hm) // cette methode va appeler la fonction tirer
+	
+	
+	/**
+	  
+	 * tentrer de  tirer 
+	 * @param humain  hm
+	 * 
+	 cette methode va appeler la fonction tirer
+	 **/
+	public void tente_tire(humain hm) 
 	{  if(devine_pos(n_v, cor))
 		{
 		    hm.tir(cor);
