@@ -62,7 +62,10 @@ public class humain {
 		if (c.etat == Etat.Bateau)
 		{
 			System.out.println("Bateau Place");
+			return(1);
 		}
+		
+		return (-1);
 		
 	}
 	
