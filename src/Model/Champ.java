@@ -5,7 +5,6 @@ package Model;
  * @author Abdel, Fatimaezzahra, Hajar, Jude;
  */
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import Enum.Etat;
 
@@ -62,32 +61,32 @@ public class Champ {
 			if(verifcont) return (true);			// indique qu'il y a un objet a la position donné
 			else return (false);					// indique que aucun objet ce trouve a cette emplacement mais le tire sera effectué
 		}
-		else return(veriftire);				// indique que le tire n'a pas fonctionner a cause de la verification
+		else return(false);				// indique que le tire n'a pas fonctionner a cause de la verification
 	}
 	
-	public Etat VerificationTire(Coordonnee vc)
+	private boolean VerificationTire(Coordonnee vc)
 	{
 		int taillemin=0;
 		if(vc.x>=taillemin&&vc.x<=this.longueur_champ&&vc.y>=taillemin&&vc.y<=this.largeur_champ)
 		{
 			if(vc.etat==Etat.Bateau)
 			{
-				return(vc.etat);								// 0 indique qu'il n'y a aucun soucis sur le tire
+				return(true);								// 0 indique qu'il n'y a aucun soucis sur le tire
 			}
 			else
 			{
 				if(vc.etat==Etat.TiresurRien)
 				{
-					return(vc.etat);								// 0 indique qu'il n'y a aucun soucis sur le tire
+					return(false);								// 0 indique qu'il n'y a aucun soucis sur le tire
 				}
-				return(Etat.Rien);							// -2 indique que le tire essayer a déjà été essayer
+				return(false);							// -2 indique que le tire essayer a déjà été essayer
 					
 			}
 		}
 		else return(false);								// -4 indique que les coordonné indiquer ne sont pas correct		
 	}
 	
-	public boolean VerificationNavire(Coordonnee vnc,Navire vnn)
+	private boolean VerificationNavire(Coordonnee vnc,Navire vnn)
 	{
 		int taillemin=0;
 		int Rtaillemax=(this.longueur_champ-vnn.taille)+1;
