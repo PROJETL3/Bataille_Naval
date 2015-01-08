@@ -83,7 +83,8 @@ public class Champ {
 					
 			}
 		}
-		else return(false);								// -4 indique que les coordonné indiquer ne sont pas correct		
+									// -4 indique que les coordonné indiquer ne sont pas correct		
+		return (Etat.Rien);
 	}
 	
 	private boolean VerificationNavire(Coordonnee vnc,Navire vnn)
