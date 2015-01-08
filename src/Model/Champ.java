@@ -20,7 +20,12 @@ public class Champ {
 		this.longueur_champ=lo;
 		this.largeur_champ=la;
 	}
-	
+	/**
+	 *  Permet d'ajouter un navire 
+	 * @param pn   // On a un navire précis a placer
+	 * @param nc	// on a les coordonnée de l'entete
+	 * @return		// on retourne Vrai si la fonciton c'est bien déroulé
+	 */
 	public boolean PositionNavire(Navire pn,Coordonnee nc) // positionner un navire
 	{
 		boolean verifnav, i;							//déclaration des variables
@@ -32,7 +37,12 @@ public class Champ {
 		}
 		else return(verifnav);					//erreur liée a la vérification
 	}
-	
+	/**
+	 * Ajout du navire dans le hashmap	
+	 * @param an	prend en parametre le navire en question
+	 * @param ac	avec le coordonnée de l'entete
+	 * @return		Vrai si la fonction c'est bien déroulé
+	 */
 	public boolean AjoutNavire(Navire an,Coordonnee ac)
 	{
 		int i;
@@ -49,7 +59,11 @@ public class Champ {
 		}
 		return true;
 	}
-	
+	/**
+	 *   cette fonction tire la coordonnée donnée
+	 * @param tc	la coordonnée en question	
+	 * @return	retourne vrai si la fonction c'est bien déroulé
+	 */
 	public boolean Tire(Coordonnee tc)
 	{
 		Etat veriftire;
@@ -64,7 +78,11 @@ public class Champ {
 		}
 		else return(false);				// indique que le tire n'a pas fonctionner a cause de la verification
 	}
-	
+	/**
+	 * 	verifie les coordonné du tire
+	 * @param vc	les coordonnée en question
+	 * @return		retourne l'état de la coordonnée
+	 */
 	public Etat VerificationTire(Coordonnee vc)
 	{
 		int taillemin=0;
@@ -87,7 +105,12 @@ public class Champ {
 									// -4 indique que les coordonné indiquer ne sont pas correct		
 		else return(null);
 	}
-	
+	/**
+	 * 		Verifie si le navire peut être positionner
+	 * @param vnc	les coordonnée de l'entete de la position
+	 * @param vnn	le navire en question
+	 * @return		retourne vrai si la fonction se déroule sans probleme
+	 */
 	public boolean VerificationNavire(Coordonnee vnc,Navire vnn)
 	{
 		int taillemin=0;
