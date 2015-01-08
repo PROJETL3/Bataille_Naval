@@ -9,11 +9,12 @@ import java.util.HashMap;
 import Enum.Etat;
 
 public class Champ {
-																			// création du hashmap ( la grille )
+																		
+	// création du hashmap ( la grille )
 	public HashMap<Navire,Coordonnee> leChamp =new HashMap<Navire, Coordonnee>(); 	// Un navire à plusieurs coordonnee
 	//  public ArrayList<Coordonnee> lesTire = new ArrayList<Coordonnee>();  dans la classe navire
-	private int longueur_champ;
-	private int largeur_champ;
+	public final int longueur_champ;
+	public final int largeur_champ;
 	public Champ(int lo,int la)
 	{	
 		this.longueur_champ=lo;
@@ -51,11 +52,11 @@ public class Champ {
 	
 	public boolean Tire(Coordonnee tc)
 	{
-		boolean veriftire;
+		Etat veriftire;
 		boolean verifcont;
 		
 		veriftire=VerificationTire(tc);
-		if(veriftire==true)
+		if(veriftire==Etat.Bateau)
 		{
 			verifcont=leChamp.containsKey(tc);
 			if(verifcont) return (true);			// indique qu'il y a un objet a la position donné
@@ -64,27 +65,27 @@ public class Champ {
 		else return(false);				// indique que le tire n'a pas fonctionner a cause de la verification
 	}
 	
-	private boolean VerificationTire(Coordonnee vc)
+	private Etat VerificationTire(Coordonnee vc)
 	{
 		int taillemin=0;
 		if(vc.x>=taillemin&&vc.x<=this.longueur_champ&&vc.y>=taillemin&&vc.y<=this.largeur_champ)
 		{
 			if(vc.etat==Etat.Bateau)
 			{
-				return(true);								// 0 indique qu'il n'y a aucun soucis sur le tire
+				return(Etat.Bateau);								// 0 indique qu'il n'y a aucun soucis sur le tire
 			}
 			else
 			{
 				if(vc.etat==Etat.TiresurRien)
 				{
-					return(false);								// 0 indique qu'il n'y a aucun soucis sur le tire
+					return(Etat.TiresurRien);								// 0 indique qu'il n'y a aucun soucis sur le tire
 				}
-				return(false);							// -2 indique que le tire essayer a déjà été essayer
+				return(Etat.Rien);							// -2 indique que le tire essayer a déjà été essayer
 					
 			}
 		}
 									// -4 indique que les coordonné indiquer ne sont pas correct		
-		return (Etat.Rien);
+		else return(null);
 	}
 	
 	private boolean VerificationNavire(Coordonnee vnc,Navire vnn)
