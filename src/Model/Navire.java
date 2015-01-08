@@ -7,10 +7,11 @@ package Model;
 		protected String nom;
 		protected int taille ;
 		protected int cptnbrdeTouche=0 ; 
+		public boolean horizontal;
 		 
 	
-	public Navire (  String n , Coordonnee c , int T){
-			coordonnee =c;
+	public Navire (  String n  , int T){  //, Coordonnee c
+			//coordonnee =c;
 			nom=n ;
 			taille=T;
 			

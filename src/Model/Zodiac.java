@@ -3,9 +3,9 @@ package Model;
 public class Zodiac extends Navire {
 		
 	
-	public Zodiac(Coordonnee c, String n){
+	public Zodiac(String n){
 		
-		super(n,c,2);
+		super(n,2);
 
 		}	
 
