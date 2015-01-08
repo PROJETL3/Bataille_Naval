@@ -1,4 +1,4 @@
-package Projet_java2014.src;
+package Model;
 
 
 	
@@ -8,6 +8,6 @@ package Projet_java2014.src;
 		public CuirasseFurtif (Coordonnee c, String n){
 			super(n,c,3);
 			
-			
-
-}
+			}
+		
+	}
