@@ -3,6 +3,7 @@ package Model;
 
 public class alerte_rouge extends bataille_normale {
 
+	
 	public alerte_rouge(Navire n_v, Coordonnee cor) {
 		
 		super(n_v,cor);
@@ -22,7 +23,7 @@ public class alerte_rouge extends bataille_normale {
 		return Y;
 	}
 	/**
-	 * * parcourir la coordonnée horizontale 
+	 * * parcourir la coordonnï¿½e horizontale 
 	 * @param int x
 	 * @param  Coordonnee c
 	 * @param int y
@@ -32,14 +33,15 @@ public class alerte_rouge extends bataille_normale {
 	     if (y == selection_cord_vert(c,y) )
 		
 	      {
-			  for(int i=y;i<carte.size(); i++)   // parcours la coordonnée horizontale dans la grille 'carte'
-				    for(int j=c.x;j<carte.size();j++ )
+			  for(int i=y;i<ch.longueur_champ; i++)   // parcours la coordonnï¿½e horizontale dans la grille 'carte'
+				    for(int j=c.x;j<ch.largeur_champ;j++ )
 			         	{
 				              	x=c.x;
 				        }
 			
 			  return x;
 	    }
+		return y;
    }
 		
 	 /**
@@ -52,7 +54,7 @@ public class alerte_rouge extends bataille_normale {
 			
 		 **/
 
-		public double indication_distance(double distance , humain hm,int x, int y, Coordonnee c)// si la case qui est touché est vide , on retur
+		public double indication_distance(double distance , humain hm,int x, int y, Coordonnee c)// si la case qui est touchï¿½ est vide , on retur
 		{  
 	             if(hm.tir(cor)==1);
 		     {

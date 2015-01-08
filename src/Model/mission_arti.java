@@ -22,7 +22,7 @@ public class mission_arti extends bataille_normale{
 	}
 	/**
 	 * 
-	 * parcourir la coordonnée horizontale dans la grille 'carte'
+	 * parcourir la coordonnï¿½e horizontale dans la grille 'carte'
 	 * @param int x
 	 * @param  Coordonnee c
 	 * @param int y
@@ -33,8 +33,8 @@ public class mission_arti extends bataille_normale{
 	{
 		if (y == selection_cord_vert(c,y) )
 		{
-			for(int i=y;i<carte.size(); i++)   
-				for(int j=c.x;j<carte.size();j++ )
+			for(int i=y;i<ch.largeur_champ; i++)   
+				for(int j=c.x;j<ch.longueur_champ;j++ )
 				{
 					x=c.x;
 				}
@@ -43,7 +43,7 @@ public class mission_arti extends bataille_normale{
 			return x;
 	}
 		
-	/** appel à la methode tirer 
+	/** appel ï¿½ la methode tirer 
 	 * @param humain  hm
 	 * 
 	 * 

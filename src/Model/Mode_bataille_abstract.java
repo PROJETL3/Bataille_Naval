@@ -18,6 +18,7 @@ public abstract class Mode_bataille_abstract {
 	IA ia_1;
 	IA ia_2;
 	 humain hm;
+	 
 	private String Type;
 	int y;
     int x;
