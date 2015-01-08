@@ -65,22 +65,22 @@ public class Champ {
 		else return(veriftire);				// indique que le tire n'a pas fonctionner a cause de la verification
 	}
 	
-	public boolean VerificationTire(Coordonnee vc)
+	public Etat VerificationTire(Coordonnee vc)
 	{
 		int taillemin=0;
 		if(vc.x>=taillemin&&vc.x<=this.longueur_champ&&vc.y>=taillemin&&vc.y<=this.largeur_champ)
 		{
 			if(vc.etat==Etat.Bateau)
 			{
-				return(true);								// 0 indique qu'il n'y a aucun soucis sur le tire
+				return(vc.etat);								// 0 indique qu'il n'y a aucun soucis sur le tire
 			}
 			else
 			{
 				if(vc.etat==Etat.TiresurRien)
 				{
-					return(true);								// 0 indique qu'il n'y a aucun soucis sur le tire
+					return(vc.etat);								// 0 indique qu'il n'y a aucun soucis sur le tire
 				}
-				return(false);							// -2 indique que le tire essayer a déjà été essayer
+				return(Etat.Rien);							// -2 indique que le tire essayer a déjà été essayer
 					
 			}
 		}

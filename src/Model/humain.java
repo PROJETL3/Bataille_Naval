@@ -16,6 +16,7 @@ public class humain {
 	 * Attribut qui permettront par la suite de gerer les différentes méthodes utilisées par le joueur
 	 */
 
+	CuirasseFurtif cui1;
 	CuirasseFurtif cui2;
 	Zodiac zod;
 	SousMarin sm;
@@ -27,19 +28,21 @@ public class humain {
 	 * Constructeur permettant d'initaliser le joueur avec la création des bateaux
 	 * d'une carte 
 	 * @param Nom variable permettant lors de l'initalisation de nommer le joueur
+	 * @param longueur   longueur de la map
+	 * @param largeur  largeur de la map
 	 */
 
-	humain(String Nom)
+	humain(String Nom,int longueur,int largeur)
 	{	
 		this.nom=Nom;
 		System.out.println("crÃ©ation du joueur "+Nom) ;
 
 		cui1 = new cuirasse("c1");
 		cui2 = new cuirasse("c2");
-		zod = new zodiaque("na3na");
+		zod = new zodiaque("zodiaque");
 		sm = new sm("sous-marin");
 		pa = new pa("porte avion");
-		Carte = new Champ();
+		Carte = new Champ(longueur,largeur);
 
 	}
 
@@ -73,22 +76,20 @@ public class humain {
 	
 	public int tir(Coordonnee key)
 	{
-		int veriftire;
+		Etat veriftire;
 		
-		veriftire=VerificationTire(key);
-		if (veriftire == 0){
-		if(Carte.Tire(key)==1) 
-		{
+		veriftire=Carte.VerificationTire(key);
+		if (veriftire == Etat.TiresurRien){
 			System.out.println("Case vide touché");
 			return 1; 
 		}
 
-		if(Carte.Tire(key)==0)  
+		else if(veriftire==Etat.Bateau)  
 		{
 			System.out.println("Bateau touché");
 			return 0;
 		}
-		}
+		
 		else return -1;
 
 	}
@@ -99,7 +100,7 @@ public class humain {
 		 * @return Retourne un entier selon la validité du tir
 		 */
 
-	public int VerificationTire(Coordonnee vc)
+	/*public int VerificationTire(Coordonnee vc)
 	{
 		int taillemax=10;
 		int taillemin=0;
@@ -108,7 +109,7 @@ public class humain {
 			//if{vc.etat==
 		}
 		else return(-1);								// -1 indique que les coordonnÃ© indiquer ne sont pas correct		
-	}
+	}*/
  
 		/**
 		 * @return Retourne le nom du joueur
