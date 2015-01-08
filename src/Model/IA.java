@@ -16,7 +16,7 @@ public class IA extends humain {
 		 */
 	public IA(String nom)
 	{
-		super(nom); 
+		super(nom,10,10); 
 		this.nom=nom;
 	}
 	
