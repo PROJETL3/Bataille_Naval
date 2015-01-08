@@ -2,13 +2,11 @@ package Model;
 /**
  * 
  * @author Abdel, Fatima, Hajar, Jude
- * Class IA dérivant de la Classe humain permettant d'initialiser un joueur automate (ordinateur)
+ * Class IA dï¿½rivant de la Classe humain permettant d'initialiser un joueur automate (ordinateur)
  *
  */
 public class IA extends humain {
-
-	
-	
+		
 	private String nom;
 		/**
 		 * Constructeur appelant celui de la classe mere
@@ -22,7 +20,7 @@ public class IA extends humain {
 	
 	/**
 	 * Redefinition de la classe tir car l'IA tire automatiquement
-	 * @return Retourne un entier selon la validité du tir
+	 * @return Retourne un entier selon la validitï¿½ du tir
 	 */
 
 	public int tir()

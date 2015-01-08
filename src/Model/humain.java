@@ -7,13 +7,13 @@ import Enum.Etat;
 	/**
 	 * 
 	 * @author Abdel,Fatima,Hajar,Jude
-	 * Class Joueur permettant la sélection du joueur	
+	 * Class Joueur permettant la sï¿½lection du joueur	
 	 */
 
 public class humain {
 	
 	/**
-	 * Attribut qui permettront par la suite de gerer les différentes méthodes utilisées par le joueur
+	 * Attribut qui permettront par la suite de gerer les diffï¿½rentes mï¿½thodes utilisï¿½es par le joueur
 	 */
 
 	CuirasseFurtif cui1;
@@ -25,7 +25,7 @@ public class humain {
 	private String nom;
 
 	/**
-	 * Constructeur permettant d'initaliser le joueur avec la création des bateaux
+	 * Constructeur permettant d'initaliser le joueur avec la crï¿½ation des bateaux
 	 * d'une carte 
 	 * @param Nom variable permettant lors de l'initalisation de nommer le joueur
 	 * @param longueur   longueur de la map
@@ -50,10 +50,10 @@ public class humain {
 
 
 	/**
-	 * Fonction permettant de placer ses bateau, la validité de l'emplacement est gérée par la classe Champ
-	 * @param bat défini le bateau voulu
-	 * @param c Informe le Champ de la coordonne souhaitée par le joueur
-	 * @return Si le bateau est bien placé ...
+	 * Fonction permettant de placer ses bateau, la validitï¿½ de l'emplacement est gï¿½rï¿½e par la classe Champ
+	 * @param bat dï¿½fini le bateau voulu
+	 * @param c Informe le Champ de la coordonne souhaitï¿½e par le joueur
+	 * @return Si le bateau est bien placï¿½ ...
 	 */
 
 	int placer_bateau(Navire bat ,Coordonnee c)
@@ -72,8 +72,8 @@ public class humain {
 
 	/**
 	 * Methode permettant de tirer
-	 * @param key Donne la case visée
-	 * @return Retourne un résultat selon la validité du tir
+	 * @param key Donne la case visï¿½e
+	 * @return Retourne un rï¿½sultat selon la validitï¿½ du tir
 	 */
 	
 	
@@ -83,13 +83,13 @@ public class humain {
 		
 		veriftire=Carte.VerificationTire(key);
 		if (veriftire == Etat.TiresurRien){
-			System.out.println("Case vide touché");
+			System.out.println("Case vide touchï¿½");
 			return 1; 
 		}
 
 		else if(veriftire==Etat.Bateau)  
 		{
-			System.out.println("Bateau touché");
+			System.out.println("Bateau touchï¿½");
 			return 0;
 		}
 		
@@ -98,9 +98,9 @@ public class humain {
 	}
 
 		/**
-		 * Methode qui verifie la validité du tir
-		 * @param vc Prend en charge la coordonnée  choisit par le tir pour la vérifier
-		 * @return Retourne un entier selon la validité du tir
+		 * Methode qui verifie la validitï¿½ du tir
+		 * @param vc Prend en charge la coordonnï¿½e  choisit par le tir pour la vï¿½rifier
+		 * @return Retourne un entier selon la validitï¿½ du tir
 		 */
 
 	/*public int VerificationTire(Coordonnee vc)

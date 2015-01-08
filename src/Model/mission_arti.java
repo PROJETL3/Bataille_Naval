@@ -7,12 +7,12 @@ public class mission_arti extends bataille_normale{
 		
 		super(n_v,cor);
 		
-	}	
-	
+	}
 	/**
-	  * selection des coordonnees verticales
-	 * @param Coordonnee c
-	 * @param , int y
+	 * selection des coordonnée verticales
+	 * @param c
+	 * @param y
+	 * @return
 	 */
 	public int selection_cord_vert(Coordonnee c, int y) 
 	{
@@ -21,14 +21,12 @@ public class mission_arti extends bataille_normale{
 		return Y;
 	}
 	/**
-	 * 
-	 * parcourir la coordonn�e horizontale dans la grille 'carte'
-	 * @param int x
-	 * @param  Coordonnee c
-	 * @param int y
-	
-	 **/
-
+	 * Parcourir la coordonnee horizontale dans la grille "carte"
+	 * @param x
+	 * @param c
+	 * @param y
+	 * @return
+	 */
 	public int coor_horis(int x, Coordonnee c,int y)
 	{
 		if (y == selection_cord_vert(c,y) )
@@ -42,13 +40,9 @@ public class mission_arti extends bataille_normale{
 		
 			return x;
 	}
-		
-	/** appel � la methode tirer 
-	 * @param humain  hm
+	/**
 	 * 
-	 * 
-	  */
-
+	 */
 	public void tente_tire(humain hm) 
 	{  if(devine_pos(n_v, cor))
 		{

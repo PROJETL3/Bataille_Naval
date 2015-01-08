@@ -7,6 +7,8 @@ public class bataille_normale {
 	Navire n_v;
 	Coordonnee cor;
 
+	Champ ch = new Champ(10,10);
+
 	public  bataille_normale(Navire n_v,Coordonnee cor)
 	{
 		this.n_v= n_v;
@@ -15,25 +17,21 @@ public class bataille_normale {
 	}
 
 	/**
-	 *  devine  la position du navire
-	 * @param Navire nv
-	 * @param Coordonne pos
-	 *
-	*/
+	 *  devine la position du navire
+	 * @param nv
+	 * @param pos
+	 * @return boolean
+	 */
 	public boolean devine_pos(Navire nv, Coordonnee pos) 
 	{
 		pos= nv.getCoordonnee();
 		return true;
 	}
 	
-	
 	/**
-	  
-	 * tentrer de  tirer 
-	 * @param humain  hm
-	 * 
-	 cette methode va appeler la fonction tirer
-	 **/
+	 * tenter de tirer
+	 * @param hm
+	 */
 	public void tente_tire(humain hm) 
 	{  if(devine_pos(n_v, cor))
 		{
