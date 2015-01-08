@@ -1,14 +1,46 @@
+
+/**
+	 * fait appel à toutes les methodes
+	 * choisir les modes de jeux
+	 * 
+	 * @param joueur 
+	 *              Le joueur va choisir le mode de jeux
+	 *              
+	 * Choisir les types de batailles
+	 * @param bataille_normale bt_n    
+	 *                           fait appel à une methode de la classe bataille normal
+	 * @param mission_radar ms_r 
+	 *                           fait appel à une methode de la classe mission radar
+	 * @param mission_arti ms_a       
+	 *                           fait appel à une methode de la classe mission artillerie
+	 * @param alerte_rouge al_r        
+	 *                           fait appel à une methode de la classe alerte rouge
+	 * @param  Model.bataille_normale choix_jeu  
+	 *                           pour choisir le type de jeux
+	 *                           
+	 * vérfie si  tous les bateaux sont coulés
+	 * @param CuirasseFurtif cu_1          
+	 *                           appele à la classe cuirasse 
+	 * @param CuirasseFurtif cu_2  
+	 *                           appele à la classe cuirasse 
+	 * @param Zodiac z  
+	 *                           appele à la classe zodiaque
+	 * @param SousMarinNucleaire s_m          
+	 *                           appele à la sm 
+	 * @param PorteAvion pm
+	 *                           
+	 **/
 package Model;
 
 public abstract class Mode_bataille_abstract {
 
 	
-	private String Joueur,Un_joueur,deux_joueur;
+	
 	private String I_A;
 	Coordonnee cor;
 	Navire nav;
-	humain hum_1;
 	humain hum_2;
+	humain hum_1;
 	IA ia_1;
 	IA ia_2;
 	 humain hm;
@@ -19,30 +51,38 @@ public abstract class Mode_bataille_abstract {
 
 	public Mode_bataille_abstract(String joueur, String type,Coordonnee cor,Navire nv,humain hum1,humain hum2,IA ia1, IA ia2 ) 
 	{
-		this.Joueur= joueur;
+		//this.Joueur= joueur;
 	    this.Type=type;
-	    this.hum_1=hum1;
-	    this.hum_2=hum2;
 		this.ia_1=ia1;
 		this.ia_2=ia2;
 	    }
 	public void choix_mode_jeu(String joueur){
 		
+	
+		
 	switch(joueur)
-	{	       
+	{
+	
+	
+	
 	        case "IA"   :          //appel à la fonctione
 		 
 	               ia_1.tir(cor);
 		    break;
 	
-		    case "Un_joueur" :       //appel � la fonctione 
-		    	                        
+		    case "Un_joueur" :
+		    	//appel � la fonctione 
+		    	
+		    	        
 		    	hum_1.placer_bateau( nav , cor) ;
 		    	hum_1.tir(cor);
 		
 		case "deux_joueur":
-	       	
+			
+			
+			
 			hum_1.placer_bateau( nav , cor) ;
+		
 			hum_2.placer_bateau( nav , cor) ;
 		
 		//   appel à la methode 
@@ -92,18 +132,22 @@ public abstract class Mode_bataille_abstract {
      }
 	
 	
-/*public boolean tout_est_coulé( cuirasse cu_1,cuirasse cu_2,zodiaque z,sm s_m,pa p_a )	// vérfie que tous les bateaux sont coulés
+public boolean tout_est_coulé( CuirasseFurtif cu_1,CuirasseFurtif cu_2,Zodiac z,SousMarinNucleaire s_m,PorteAvion p_a )	// vérfie que tous les bateaux sont coulés
 
-{  String t[][]={{cu_1,t},cu_2,z,s_m,p_a};
-	for(String e:t){
-	if(   )
-	{
+{  
+	cu_1.estCoule();
+	cu_2.estCoule();
+	z.estCoule();
+	s_m.estCoule();
+	p_a.estCoule();
+
+return true;
+	
 		
-	}
-	}
+	
 
  }
-*/	
+	
 
 
 

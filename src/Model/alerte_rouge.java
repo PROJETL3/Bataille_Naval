@@ -1,3 +1,24 @@
+
+ /**
+	 * selection des coordonnee verticales
+	 * @param Coordonnee c
+	 * @param , int y
+	 * parcourir la coordonnée horizontale 
+	 * @param int x
+	 * @param  Coordonnee c
+	 * @param int y
+	 * * indication de la distance
+	 * @param double distance 
+	 * @param  humain hm
+	 * @param  int x
+	 * @param  int y
+	 * @param  Coordonnee c
+	
+	
+	 **/
+
+
+
 package Model;
 
 public class alerte_rouge extends bataille_normale {
