@@ -19,8 +19,8 @@ public class humain {
 	CuirasseFurtif cui1;
 	CuirasseFurtif cui2;
 	Zodiac zod;
-	SousMarin sm;
-	pa pa;
+	SousMarinNucleaire sm;
+	PorteAvion pa;
 	Champ Carte; 
 	private String nom;
 
@@ -37,11 +37,11 @@ public class humain {
 		this.nom=Nom;
 		System.out.println("création du joueur "+Nom) ;
 
-		cui1 = new cuirasse("c1");
-		cui2 = new cuirasse("c2");
-		zod = new zodiaque("zodiaque");
-		sm = new sm("sous-marin");
-		pa = new pa("porte avion");
+		cui1 = new CuirasseFurtif("c1");
+		cui2 = new CuirasseFurtif("c2");
+		zod = new Zodiac("zodiaque");
+		sm = new SousMarinNucleaire("sous-marin");
+		pa = new PorteAvion("porte avion");
 		Carte = new Champ(longueur,largeur);
 
 	}

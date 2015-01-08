@@ -1,4 +1,4 @@
-package Projet_java2014.src;
+package Model;
 
 public class Zodiac extends Navire {
 		
