@@ -65,7 +65,7 @@ public class Champ {
 		else return(false);				// indique que le tire n'a pas fonctionner a cause de la verification
 	}
 	
-	private Etat VerificationTire(Coordonnee vc)
+	public Etat VerificationTire(Coordonnee vc)
 	{
 		int taillemin=0;
 		if(vc.x>=taillemin&&vc.x<=this.longueur_champ&&vc.y>=taillemin&&vc.y<=this.largeur_champ)
@@ -88,7 +88,7 @@ public class Champ {
 		else return(null);
 	}
 	
-	private boolean VerificationNavire(Coordonnee vnc,Navire vnn)
+	public boolean VerificationNavire(Coordonnee vnc,Navire vnn)
 	{
 		int taillemin=0;
 		int Rtaillemax=(this.longueur_champ-vnn.taille)+1;
